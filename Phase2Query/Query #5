@@ -1,0 +1,6 @@
+/*Count the number of businesses opening in each district*/
+select d_districtname, b_openinghours, count(b_address)
+from Business, District
+where b_districtid = d_districtid
+group by b_openinghours, d_districtname
+order by d_districtname

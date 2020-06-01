@@ -1,0 +1,5 @@
+SELECT b_address, b_telephone, b_rating, d_districtname
+From Business, District, ShopType
+WHERE b_districtid = d_districtid
+AND b_shopid = s_shopid
+AND s_type = 'local'

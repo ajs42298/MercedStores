@@ -1,0 +1,5 @@
+/*List all the Vacancies in each District*/
+Select d_districtname, count(v_address) AS VacancyCount
+from Vacancies, District
+where v_districtid = d_districtid
+group by d_districtname

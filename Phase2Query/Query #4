@@ -1,0 +1,6 @@
+/*Select Owners Contact Information of interested users in their Vacant Buildings*/ 
+Select u_name, o_name, o_telephone, o_email
+from User, Star, Owner, Vacancies
+where u_sid = s_sid
+and s_address = v_address
+and v_ownerid = o_ownerid

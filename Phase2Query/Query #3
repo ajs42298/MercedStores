@@ -1,0 +1,7 @@
+/*Select the Addresses and Departments that has the lowest rating in each district*/
+Select d_districtname, s_departments, b_address, min(b_rating)
+from Business, Owner, District, ShopType
+where b_ownerid = o_ownerid
+and b_districtid = d_districtid
+and b_shopid = s_shopid
+group by d_districtname

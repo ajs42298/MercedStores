@@ -1,0 +1,6 @@
+/*Select all the addresses and owner information which they are trying to sell their vacancies*/ 
+Select v_address, o_name, o_telephone, o_email
+from Owner, Vacancies , District
+where o_ownerid = v_ownerid
+and v_districtid = d_districtid
+and v_rent = 'no'

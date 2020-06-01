@@ -1,0 +1,7 @@
+/*How many corporate businesses are in each district?*/
+Select d_districtname, count(s_type)
+from ShopType, Business, District
+where b_districtid = d_districtid
+and b_shopid = s_shopid
+and s_type = 'corporate'
+group by d_districtname
